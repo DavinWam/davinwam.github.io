@@ -33,23 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sessionStorage.setItem('visitedGames', JSON.stringify(visitedGames));
     }
 
-       // Load games from JSON
-    fetch('./games.json')
-        .then(response => response.json())
-        .then(games => {
-            console.log("Loaded games:", games);  // For now, just print them
-
-            // If you want to use this later, here's a working stub for thumbnail path correction
-            games.forEach(game => {
-                game.image = `./thumbnails/thumbnails/thumbnails/thumbnail_${game.filename}.jpg`; // or .png depending
-            });
-
-            // Continue your carousel logic here...
-        })
-        .catch(error => {
-            console.error("Failed to load games.json:", error);
-        });
-
     // Function to filter games
     function filterGames(gameList, visited) {
         let unvisitedGames = gameList.filter(game => !visited.includes(getFileName(game.link)));
