@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+
+function init() {
     let currentIndex = 0;
     const items = document.querySelectorAll('.game-carousel .game');
     const totalItems = items.length;
@@ -82,4 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize
     updateCarousel();
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
+}

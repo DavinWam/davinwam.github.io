@@ -1,7 +1,9 @@
-//add a button for github
 
-document.addEventListener("DOMContentLoaded", function() {
-    const path = window.location.pathname;
+
+
+
+function init() {
+      const path = window.location.pathname;
 
     // Determine the page type based on the path
     let pageType;
@@ -88,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </ul>
             </nav>
         `;
-
+        //add a button for my github
         document.getElementById("footer-container").innerHTML = `
             <div class="social-buttons">
                 <a href="https://www.linkedin.com/in/davin-wambogo/" target="_blank" class="social-button">
@@ -100,6 +102,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a href="mailto:davinwambogo@gmail.com" class="social-button">
                     <img src="socialButton (1).png" alt="Email" class="social-icon email-icon">
                 </a>
+                <a href="https://github.com/DavinWam" target="_blank" class="social-button">
+                    <img src="socialButton (4).png" alt="Github" class="social-icon email-icon">
+                </a>
             </div>
 
             <footer>
@@ -107,4 +112,11 @@ document.addEventListener("DOMContentLoaded", function() {
             </footer>
         `;
     }
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
+}
+
