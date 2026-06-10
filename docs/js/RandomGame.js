@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Array of game details
+function init() {
+      // Array of game details
     const games = [
         { title: "BLADES ON ICE", link: "blades_on_ice.html", image: "../thumbnails/thumbnail_blades_on_ice.png" },
         { title: "ENYA'S JOURNEY", link: "enyas_journey.html", image: "../thumbnails/thumbnail_enyas_journey.jpg" },
@@ -116,4 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initial display of games
     displayGames(currentIndex);
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
+}

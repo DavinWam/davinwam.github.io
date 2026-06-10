@@ -7,5 +7,5 @@ await import(getPathToScript(import.meta.url, "banner-sketch.js"));
 await import(getPathToScript(import.meta.url, "particle-sketch.js"));
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Homepage loaded");
+    console.log("Homepage Scripts loaded");
 });
