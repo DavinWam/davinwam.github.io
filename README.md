@@ -4,7 +4,3 @@ This repo hosts my game dev portfolio site (served via GitHub Pages), and this s
 
 🕹️ Live site: [https://davinwam.github.io](https://davinwam.github.io)
 
-### Structure
-
-- `/docs`: Site Content
-- `/pytools`: Python tools to template and manage project pages
